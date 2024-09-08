@@ -1,0 +1,28 @@
+# -*- conf -*-
+# theme: Raiju Dark
+# description: based on Raiju Dark for vscode (https://github.com/tobiastimm/raiju)
+
+[cursor]
+color =  8d9ad1 d7e2ff
+
+[colors]
+foreground = d4d4d4
+background = 0f1523
+
+regular0 = 6f7899 # black
+regular1 = a188f1 # red
+regular2 = 7ebbbb # green
+regular3 = ffedcb # yellow
+regular4 = 8d9ad1 # blue
+regular5 = ceb3f7 # magenta
+regular6 = a7a7ee # cyan
+regular7 = d7e2ff # white
+
+bright0 = 6f7899 # bright black
+bright1 = a188f1 # bright red
+bright2 = 7ebbbb # bright green
+bright3 = ffedcb # bright yellow
+bright4 = 8d9ad1 # bright blue
+bright5 = ceb3f7 # bright magenta
+bright6 = a7a7ee # bright cyan
+bright7 = d7e2ff # bright white
