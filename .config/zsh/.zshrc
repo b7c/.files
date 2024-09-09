@@ -19,8 +19,10 @@ alias .files='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias open='xdg-open'
 alias ff='clear;fastfetch -c neofetch'
 alias whoamip='dig -4 +short myip.opendns.com @resolver2.opendns.com'
-alias cd=z
-alias zq='zoxide query'
+if command -v zoxide &>/dev/null; then
+  alias cd=z
+  alias zq='zoxide query'
+fi
 
 # path
 export PATH="$HOME/.local/bin:$PATH"
