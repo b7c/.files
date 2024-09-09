@@ -11,6 +11,10 @@ antidote load ~/.config/zsh/antidote.conf
 alias ls='ls --color=always'
 alias la='ls -lha'
 alias l='ls -lh'
+if command -v eza &>/dev/null; then
+  alias ls='eza --icons=auto'
+  alias lg='ls --git --git-repos'
+fi
 alias .files='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias open='xdg-open'
 alias ff='clear;fastfetch -c neofetch'
