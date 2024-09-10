@@ -2,8 +2,11 @@
 ZVM_VI_EDITOR=nvim
 PURE_GIT_PULL=0
 
-command -v fzf &>/dev/null && source <(fzf --zsh)
-command -v zoxide &>/dev/null && source <(zoxide init zsh)
+zvm_after_init() {
+  command -v fzf &>/dev/null && source <(fzf --zsh);
+  command -v zoxide &>/dev/null && source <(zoxide init zsh)
+}
+
 source ~/.local/share/antidote/antidote.zsh
 antidote load ~/.config/zsh/antidote.conf
 
