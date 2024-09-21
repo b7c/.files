@@ -20,6 +20,7 @@ if command -v eza &>/dev/null; then
   alias la='ls -la'
   alias lg='ls -l --git --git-repos'
 fi
+alias diff='diff --color=auto'
 alias .files='/usr/bin/git --git-dir=$HOME/.files/ --work-tree=$HOME'
 alias open='xdg-open'
 alias ff='clear;fastfetch -c neofetch'
@@ -33,6 +34,7 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.dotnet/tools"
+export PATH="$PATH:$HOME/.local/scripts"
 
 # environment
 export EDITOR=nvim
