@@ -29,6 +29,8 @@ return {
 
         local has_telescope, telescope = pcall(require, 'telescope.builtin')
 
+        vim.diagnostic.enable(not vim.g.vscode)
+
         nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
         nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
@@ -39,6 +41,10 @@ return {
           nmap('gr', telescope.lsp_references, '[G]oto [R]eferences')
           nmap('<leader>ds', telescope.lsp_document_symbols, '[D]ocument [S]ymbols')
           nmap('<leader>ws', telescope.lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
+        else
+          nmap('gr', vim.lsp.buf.references, '[G]oto [R]eferences')
+          nmap('<leader>ds', vim.lsp.buf.document_symbol, '[D]ocument [S]ymbols')
+          nmap('<leader>ws', vim.lsp.buf.workspace_symbol, '[W]orkspace [S]ymbols')
         end
 
         -- See `:help K` for why this keymap
@@ -60,6 +66,7 @@ return {
       end
 
       local servers = {
+        omnisharp = {},
         clangd = {},
         gopls = {},
         pyright = {},

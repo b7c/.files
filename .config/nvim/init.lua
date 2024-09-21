@@ -23,6 +23,14 @@ require('lazy').setup({
   { import = 'plugins/terminal', cond = not vim.g.vscode },
 })
 
+if vim.g.vscode then
+  vim.keymap.set('n', 'gr', vim.lsp.buf.references)
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover)
+  vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help)
+  vim.keymap.set('n', '<leader>ds', vim.lsp.buf.document_symbol)
+  vim.keymap.set('n', '<leader>ws', vim.lsp.buf.workspace_symbol)
+end
+
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
@@ -84,6 +92,9 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = "Open diagn
 if vim.g.vscode then
   vim.diagnostic.config({
     virtual_text = false,
+    float = false,
+    signs = false,
+    underline = false,
   })
 end
 
